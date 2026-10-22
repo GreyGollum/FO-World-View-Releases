@@ -1,25 +1,32 @@
-# FO World View 0.38.0 — Windows public beta
+# FO World Atlas 0.38.2 — Windows public beta
 
-FO World View 0.38.0 is the first release published through this dedicated
-public download repository.
+FO World Atlas is an offline-first research and campaign atlas. This patch
+restores reviewed map coverage and strengthens the evidence boundary between
+canon identity and estimated WGS84 placement.
 
-## Included
+## Patch changes
 
-- Native Windows x64 NSIS and MSI installers in one verified ZIP.
-- Offline Natural Earth world outline and nine bounded USGS regional imagery
-  plates, with attribution and acquisition details in the package.
-- Searchable source directory with official-canon, other official, reference,
-  and homebrew groupings and focused status views.
-- Game-local vector atlases for Fallout 3, Fallout: New Vegas, Fallout 4, and
-  Fallout 76, clearly identified as X/Y coordinates rather than WGS84.
-- Eighteen project-original topographic schematics for seven supported Fallout
-  3 and eleven supported New Vegas worldspaces.
-- Named homebrew campaigns with independent maps and timelines.
-- Source-only Local Map Builder for optional use with a user's own supported
-  game installation. Python 3.10 or newer with Pillow is required for this
-  optional tool.
-- Dependency notices, an SBOM, data-rights documentation, a clean-source release
-  manifest, and checksums.
+- Restores 648 previously reviewed placements that had been omitted from the
+  public runtime, bringing the reviewed public atlas to 938 WGS84 records.
+- Adds a durable 761-record approval ledger that distinguishes a canon location
+  identity from a project-reviewed estimated placement.
+- Restores 85 exact game-record crosswalks and keeps unreviewed community-map
+  records withheld.
+- Preserves multiple events at one place while rejecting incompatible dates or
+  conflicting locations for the same event.
+- Rebuilds the QGIS and KML companions from the same reviewed public dataset.
+- Corrects the qualified Josh Sawyer Commonwealth reconstruction so the North
+  West/South West division crosses only northern California.
+- Gives the Texas Commonwealth a clearer dusty-rose fill so it remains distinct
+  from the darker Four States region.
+
+## Included map presentation
+
+- NASA Blue Marble provides the continuous offline world imagery.
+- Nine bounded USGS plates provide optional regional detail.
+- Wireframe and scan-line presentation modes remain offline.
+- Canon, non-canon or implied, and homebrew content remain independently
+  selectable. Vault 37 remains the sole built-in homebrew point.
 
 ## Installation
 
@@ -27,32 +34,22 @@ public download repository.
 2. Verify the ZIP's SHA-256 value.
 3. Extract the ZIP.
 4. Run the file ending in `Setup.exe` for a normal per-user installation.
-5. Open **FO World View** from the Windows Start menu.
+5. Open **FO World Atlas** from the Windows Start menu.
 
 The MSI is an alternative for users who specifically need Windows Installer
 deployment. Most users should choose the Setup executable.
 
-## Upgrade behavior
-
-The Setup executable retires a detected 0.37.x per-user installation's old
-executable, uninstall registration, and installer-created shortcuts. It leaves
-unrecognized content and private map data in `%LOCALAPPDATA%\FOworld-view` in
-place. The 0.38.0 MSI retains the 0.37.x upgrade identity while using a new
-per-release ProductCode.
-
-Both the 0.37.5 NSIS and 0.37.6 MSI upgrade paths were exercised on disposable
-Windows runners. Current installation, shortcut targeting, application launch,
-legacy-registration removal, uninstall cleanup, and private/user-file
-preservation passed.
+This beta is not code-signed. Verify the separately published SHA-256 checksum
+before running the installer.
 
 ## Known limitations
 
-- The installers are not code-signed, so Windows may report an unknown
-  publisher.
-- The bundled USGS imagery is regional, not a worldwide satellite layer.
-- Fallout 76 is continuously updated; its status covers a specifically audited
-  client snapshot and may need review after a game update.
-- Optional local map imports accept only exact supported source files and remain
-  private to the local app profile.
+- The USGS imagery is regional rather than worldwide.
+- Fallout 76 reflects the specifically audited Steam client snapshot and may
+  require review after a game update.
+- Included game-area maps are project-original schematics; locally generated
+  maps from supported user-owned installations remain private.
+- Physical Windows installation and touch-device review remain beta acceptance
+  activities.
 
 See [DISCLAIMER.md](DISCLAIMER.md) for the complete fan-project notice.
