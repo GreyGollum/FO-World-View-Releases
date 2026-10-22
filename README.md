@@ -1,9 +1,9 @@
-# FO World View
+# FO World Atlas
 
-FO World View is a free, offline-first Windows research and campaign atlas with
+FO World Atlas is a free, offline-first Windows research and campaign atlas with
 independent, fan-made reference data about the Fallout games.
 
-[Download FO World View 0.38.0](https://github.com/GreyGollum/FO-World-View-Releases/releases/tag/v0.38.0)
+[Download FO World Atlas 0.38.2](https://github.com/GreyGollum/fo-world-atlas-releases/releases/tag/v0.38.2)
 
 The recommended installer is the `Setup.exe` inside the release ZIP. An MSI is
 also included for people who specifically need Windows Installer deployment.
@@ -28,7 +28,7 @@ warning.
 
 ## Screenshots
 
-![FO World View world atlas](screenshots/fo-world-view-main.png)
+![FO World Atlas world atlas](screenshots/fo-world-view-main.png)
 
 ![Game-local map selector](screenshots/fo-world-view-game-maps.png)
 
@@ -37,15 +37,15 @@ warning.
 ## Download and verification
 
 Download the ZIP and its matching `.sha256` file from the
-[v0.38.0 release](https://github.com/GreyGollum/FO-World-View-Releases/releases/tag/v0.38.0).
+[v0.38.2 release](https://github.com/GreyGollum/fo-world-atlas-releases/releases/tag/v0.38.2).
 In PowerShell, run this command from the download folder:
 
 ```powershell
-Get-FileHash .\FOworld-view-0.38.0-Windows-x64.zip -Algorithm SHA256
+Get-FileHash .\fo-world-atlas-0.38.2-windows-x64.zip -Algorithm SHA256
 ```
 
 The reported hash must match the value in
-`FOworld-view-0.38.0-Windows-x64.zip.sha256`. Do not run a copy whose hash does
+`fo-world-atlas-0.38.2-windows-x64.zip.sha256`. Do not run a copy whose hash does
 not match.
 
 ## Support
@@ -57,7 +57,7 @@ text, or franchise content.
 
 ## Fan-project notice
 
-FO World View is an unofficial fan-made mapping and tabletop gaming utility. It
+FO World Atlas is an unofficial fan-made mapping and tabletop gaming utility. It
 is not affiliated with, sponsored, approved, or endorsed by Bethesda Softworks,
 ZeniMax Media, Microsoft, or Modiphius Entertainment. Fallout and related names
 and marks belong to their respective owners. See [DISCLAIMER.md](DISCLAIMER.md).
